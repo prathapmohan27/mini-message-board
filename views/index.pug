@@ -1,0 +1,16 @@
+extends layout
+block content
+  head 
+    link(rel='stylesheet', href='./public/stylesheets/style.css', type='text/css' )
+  div.message-container
+    h1= title
+    p Welcome to #{title}
+    ul.list-container
+      each val in messages 
+        li
+          div.card
+            p #{val.text}
+            p #{val.user}
+            p #{val.added}
+
+  a.send-link(href = '/new') send

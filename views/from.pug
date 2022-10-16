@@ -1,0 +1,8 @@
+extends layout
+block content
+    div.form-container
+        h1= title
+        form.message-from(method="POST" action="/new")
+            input(type="text", name="user", placeholder="User Name" required )
+            input(type="text", name="messageText",placeholder="Message" required)
+            button(type="submit") send
